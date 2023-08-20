@@ -85,8 +85,8 @@ def test_find_suitable_user():
 
 def test_readable_function():
     open_browser(browser_name="Chrome")
-    # go_to_companyname_homepage(page_url="https://companyname.com")
-    # find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
+    go_to_companyname_homepage(page_url="https://companyname.com")
+    find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
 
 def open_browser(browser_name):
@@ -106,4 +106,6 @@ def find_registration_button_on_login_page(page_url, button_text):
 def write_function_and_arguments(function, *args):
     func_name = function.__name__.replace('_', ' ').title()
     args_name = ", ".join([*args])
+    print(f'{func_name} [{args_name}]')
     return f'{func_name} [{args_name}]'
+
